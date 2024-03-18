@@ -40,7 +40,7 @@ const OpenSourceSection = () => {
 
                         <Link
                             className="flex flex-row gap-2 items-center hover:opacity-80 text-blue-800 pt-2"
-                            href="https://github.com/MarNeumann/portfolio"
+                            href="https://github.com/MarNeumann/cv"
                             target="_blank"
                         >
                             <LinkIcon size={16} />
