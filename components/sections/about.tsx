@@ -1,28 +1,35 @@
 import Section from "@/components/ui/section";
-import { Link, Mail } from "lucide-react";
+import { LinkIcon, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 const AboutSection = () => (
     <Section title="Über mich">
         <div className="p-3 bg-gray-50 rounded flex flex-col gap-3">
             <p className="text-sm font-light">
-                Ich bin leidenschaftlich daran interessiert, Technologie
-                einzusetzen, um reale Probleme zu lösen. Ich suche stets nach
-                neuen Wegen, um die Benutzererfahrung zu verbessern und Software
-                für jedermann zugänglicher zu machen. Ich bin auch ein starker
-                Befürworter von Open-Source-Software und bin immer bereit, zur
-                Gemeinschaft beizutragen.
+                Hi! Hier ist Marvin, ein leidenschaftlicher Full-Stack
+                Entwickler und Software-Architekt aus Deutschland. Ich habe
+                Erfahrung in der Entwicklung von Webanwendungen und mobilen
+                Apps. Mein Interesse für Technologie und Softwareentwicklung
+                begann in meiner Jugend und hat sich seitdem zu einer
+                lebenslangen Leidenschaft entwickelt.
             </p>
             <Separator />
-            <div className="flex flex-col gap-4 ">
-                <div className="flex flex-row gap-2 items-center hover:opacity-80">
-                    <Link size={16} />
-                    <p className="text-sm">marvinneumann.com</p>
-                </div>
-                <div className="flex flex-row gap-2 items-center hover:opacity-80">
+            <div className="flex flex-row flex-wrap gap-4 ">
+                <Link
+                    className="flex flex-row gap-2 items-center hover:opacity-80"
+                    href="#"
+                >
+                    <LinkIcon size={16} />
+                    <p className="text-sm ">marvinneumann.com</p>
+                </Link>
+                <Link
+                    className="flex flex-row gap-2 items-center hover:opacity-80"
+                    href="mailto:mail@marvinneumann.com"
+                >
                     <Mail size={16} />
                     <p className="text-sm">mail@marvinneumann.com</p>
-                </div>
+                </Link>
             </div>
         </div>
     </Section>

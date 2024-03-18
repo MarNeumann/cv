@@ -3,6 +3,7 @@ import CVSection from "@/components/sections/cv";
 import EducationSection from "@/components/sections/education";
 import HeroSection from "@/components/sections/hero";
 import InformationSection from "@/components/sections/information";
+import OpenSourceSection from "@/components/sections/opensource";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -27,6 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                             >
                                 <CVSection />
                                 <EducationSection />
+                                <OpenSourceSection />
                             </TabsContent>
                             <TabsContent value="blog">{children}</TabsContent>
                         </Tabs>

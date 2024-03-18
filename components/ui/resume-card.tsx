@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SkillBadge from "@/components/ui/skillbadge";
-import { Briefcase, Calendar, Link, MapPin } from "lucide-react";
+import { Briefcase, Calendar, LinkIcon, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const ResumeCard = ({
     image,
@@ -11,6 +12,7 @@ const ResumeCard = ({
     date,
     description,
     link,
+    linkShorthand,
 }: {
     image: string;
     title: string;
@@ -20,6 +22,7 @@ const ResumeCard = ({
     date: string;
     description: string;
     link: string;
+    linkShorthand: string;
 }) => {
     return (
         <div className="p-3 bg-gray-50 rounded flex flex-col gap-3 hover:bg-gray-100 duration-200">
@@ -36,7 +39,7 @@ const ResumeCard = ({
                         <p className="font-medium">{title}</p>
                         <SkillBadge text={subtitle} />
                     </div>
-                    <div className="flex flex-row gap-3 items-center text-xs flex-wrap">
+                    <div className="flex flex-row gap-x-3 items-center text-xs flex-wrap">
                         <div className="flex flex-row items-center gap-1">
                             <Briefcase size={12} />
                             <p>{company}</p>
@@ -51,10 +54,14 @@ const ResumeCard = ({
                         </div>
                     </div>
                     <p className="text-sm font-light pt-2">{description}</p>
-                    <div className="flex flex-row gap-2 items-center hover:opacity-80 text-blue-800 pt-2">
-                        <Link size={16} />
-                        <p className="text-sm">{link}</p>
-                    </div>
+                    <Link
+                        className="flex flex-row gap-2 items-center hover:opacity-80 text-blue-800 pt-2"
+                        href={link}
+                        target="_blank"
+                    >
+                        <LinkIcon size={16} />
+                        <p className="text-sm">{linkShorthand}</p>
+                    </Link>
                 </div>
             </div>
         </div>

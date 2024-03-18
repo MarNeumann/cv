@@ -17,7 +17,8 @@ const CVSection = () => {
                 location="Wallertheim, Deutschland"
                 date="2021 - Heute"
                 description="Als freiberuflicher Softwareentwickler entwickle ich Webanwendungen für Kunden des deutschen Mittelstands. Ich bin spezialisiert auf die Entwicklung von benutzerfreundlichen und skalierbaren Webanwendungen. Ich arbeite eng mit meinen Kunden zusammen, um ihre Anforderungen zu verstehen und maßgeschneiderte Lösungen zu realisieren."
-                link="digitaleantworten.de"
+                linkShorthand="digitaleantworten.de"
+                link="https://digitaleantworten.de"
             />
         </Section>
     );

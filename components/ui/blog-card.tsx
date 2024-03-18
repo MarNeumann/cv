@@ -1,4 +1,5 @@
-import { Link } from "lucide-react";
+import { LinkIcon } from "lucide-react";
+import Link from "next/link";
 
 const BlogCard = ({
     title,
@@ -22,10 +23,13 @@ const BlogCard = ({
             </p>
             <p className="font-medium">{title}</p>
             <p className="text-sm font-light">{content}</p>
-            <div className="flex flex-row gap-2 items-center hover:opacity-80 text-blue-800 pt-2">
-                <Link size={16} />
-                <p className="text-sm">{link}</p>
-            </div>
+            <Link
+                className="flex flex-row gap-2 items-center hover:opacity-80 text-blue-800 pt-2"
+                href={link}
+            >
+                <LinkIcon size={16} />
+                <p className="text-sm">Weiterlesen</p>
+            </Link>
         </div>
     );
 };

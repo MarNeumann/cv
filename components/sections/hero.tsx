@@ -69,7 +69,10 @@ const HeroSection = () => {
                         <SkillBadge key={skill} text={skill} />
                     ))}
                 </div>
-                <Button className="gap-2 w-full bg-blue-700 hover:bg-blue-800">
+                <Button
+                    className="gap-2 w-full bg-blue-700 hover:bg-blue-800"
+                    onClick={() => window.open("/resume.pdf")}
+                >
                     CV herunterladen
                     <Download size={16} />
                 </Button>

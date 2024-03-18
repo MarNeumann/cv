@@ -14,6 +14,7 @@ interface Education {
     date: string;
     description: string;
     link: string;
+    linkShorthand: string;
 }
 
 const education = [
@@ -25,19 +26,21 @@ const education = [
         location: "Wiesbaden, Deutschland",
         date: "2021 - 2023",
         description:
-            "Als freiberuflicher Softwareentwickler entwickle ich Webanwendungen für Kunden des deutschen Mittelstands. Ich bin spezialisiert auf die Entwicklung von benutzerfreundlichen und skalierbaren Webanwendungen. Ich arbeite eng mit meinen Kunden zusammen, um ihre Anforderungen zu verstehen und maßgeschneiderte Lösungen zu realisieren.",
-        link: "aareal-bank.de",
+            "Durch meine Ausbildung zum Fachinformatiker (Anwendungsentwicklung) bei der Aareal Bank AG erhielt ich einen umfassenden Einblick in die Anforderungen und Prozesse eines internationalen Konzerns. Ich habe meine Ausbildung verkürzt und erfolgreich abgeschlossen.",
+        linkShorthand: "aareal-bank.com",
+        link: "https://aareal-bank.com",
     },
     {
         image: "/kit.png",
         title: "Wirtschaftsinformatik",
         subtitle: "Studium",
-        company: "Karlsruher Institut für Technologie (KIT)",
+        company: "Karlsruher Institut für Technologie",
         location: "Karlsruhe, Deutschland",
         date: "2019 - 2021",
         description:
-            "Als freiberuflicher Softwareentwickler entwickle ich Webanwendungen für Kunden des deutschen Mittelstands. Ich bin spezialisiert auf die Entwicklung von benutzerfreundlichen und skalierbaren Webanwendungen. Ich arbeite eng mit meinen Kunden zusammen, um ihre Anforderungen zu verstehen und maßgeschneiderte Lösungen zu realisieren.",
-        link: "kit.edu",
+            "Nach meinem Abitur habe ich mich für ein Studium der Wirtschaftsinformatik am Karlsruher Institut für Technologie (KIT) entschieden. Während meines Studiums habe ich mich auf die Entwicklung von Webanwendungen und die Anwendung von KI-Technologien spezialisiert. Nach 4 Semestern habe ich mich dazu entschieden, mein Studium abzubrechen und mich auf praxisnähere Inhalte zu konzentrieren.",
+        linkShorthand: "kit.edu",
+        link: "https://kit.edu",
     },
 ] as Education[];
 
@@ -56,6 +59,7 @@ const EducationSection = () => {
                         date={education.date}
                         description={education.description}
                         link={education.link}
+                        linkShorthand={education.linkShorthand}
                     />
                 ))}
             </div>
